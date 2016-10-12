@@ -14,6 +14,7 @@
     - sudo make
     
 - Run:
+  - cd /home/pi/433Mhz-Receiver-Raspberry 
   - sudo ./receiver -l
     - receive all incoming messages and display them
    - sudo ./receiver [output pin]  [message code]
@@ -21,6 +22,8 @@
      
 - Make receiver bash command
   - cd /home/pi/433Mhz-Receiver-Raspberry
+  - sudo make
   - sudo mv receiver /usr/bin/receiver
   - sudo chown root:root /usr/bin/receiver
   - sudo chmod u+s /usr/bin/receiver
+  - now you can use "sudo receiver" in all directorys 
