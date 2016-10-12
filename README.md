@@ -15,6 +15,6 @@
     
 - Run:
   - sudo ./receiver -l
-    - receives all incoming messages and display them
+    - receive all incoming messages and display them
    - sudo ./receiver [output pin]  [message code]
      - if a massage is received with the same code then [message code] set the output pin for 500 ms to High
