@@ -18,3 +18,9 @@
     - receive all incoming messages and display them
    - sudo ./receiver [output pin]  [message code]
      - if a massage is received with the same code then [message code] set the output pin for 500 ms to High
+     
+- Make receiver bash command
+  - cd /home/pi/433Mhz-Receiver-Raspberry
+  - sudo mv receiver /usr/bin/receiver
+  - sudo chown root:root /usr/bin/receiver
+  - sudo chmod u+s /usr/bin/receiver
