@@ -1,14 +1,14 @@
 # 433Mhz-Receiver-Raspberry
 
-Install:
+- Install:
 
   - Download and build wiringPI
-  git clone git://git.drogon.net/wiringPi
-  cd wiringPi
-  sudo ./build
+    - git clone git://git.drogon.net/wiringPi
+    - cd wiringPi
+    - sudo ./build
   
-  -Download this repository
-  cd /home/pi
-  git clone --recursive https://github.com/schattenmann80/433Mhz-Receiver-Raspberry.git
-  cd 433Mhz-Receiver-Raspberry
-  sudo make
+  - Download this repository
+    - cd /home/pi
+    - git clone --recursive https://github.com/schattenmann80/433Mhz-Receiver-Raspberry.git
+    - cd 433Mhz-Receiver-Raspberry
+    - sudo make
