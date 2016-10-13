@@ -31,7 +31,7 @@ See https://projects.drogon.net/raspberry-pi/wiringpi/pins/ for pin mapping of t
 ## Run
   - cd /home/pi/433Mhz-Receiver-Raspberry 
   - sudo ./receiver -l
-    - receive all incoming messages and display them
+    - receives all incoming messages and display them
   - sudo ./receiver [output pin]  [message code]
      - if a massage is received with the same code then [message code] set the output pin for 500 ms to High. For Pin mapping see        https://projects.drogon.net/raspberry-pi/wiringpi/pins/
      
