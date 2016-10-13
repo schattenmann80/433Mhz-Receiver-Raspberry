@@ -41,7 +41,7 @@ See https://projects.drogon.net/raspberry-pi/wiringpi/pins/ for pin mapping of t
   - ```sudo mv receiver /usr/bin/receiver```
   - ```sudo chown root:root /usr/bin/receiver```
   - ```sudo chmod u+s /usr/bin/receiver```
-  - ```now you can use "sudo receiver" in all directorys``` 
+  - now you can use "sudo receiver" in all directorys
 
 ## Stop
   - Stop the programm with ctrl-c 
