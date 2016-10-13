@@ -15,33 +15,33 @@ See https://projects.drogon.net/raspberry-pi/wiringpi/pins/ for pin mapping of t
 ## Install:
 
   - Download and build wiringPI
-    - git clone git://git.drogon.net/wiringPi
-    - cd wiringPi
-    - sudo ./build
+    - ```git clone git://git.drogon.net/wiringPi```
+    - ```cd wiringPi```
+    - ```sudo ./build```
   
   - Download this repository
-    - cd /home/pi
-    - git clone --recursive https://github.com/schattenmann80/433Mhz-Receiver-Raspberry.git
-    - cd 433Mhz-Receiver-Raspberry
-    - sudo make
+    - ```cd /home/pi```
+    - ```git clone --recursive https://github.com/schattenmann80/433Mhz-Receiver-Raspberry.git```
+    - ```cd 433Mhz-Receiver-Raspberry```
+    - ```sudo make```
   - Hardware setup
     - Receiver data input pin is pin 2 under WiringPi layout (GIPO 27 normal Layout)
     - The Output pin is selectable with the command line argument
     
 ## Run
-  - cd /home/pi/433Mhz-Receiver-Raspberry 
-  - sudo ./receiver -l
+  - ```cd /home/pi/433Mhz-Receiver-Raspberry``` 
+  - ```sudo ./receiver -l```
     - receives all incoming messages and display them
-  - sudo ./receiver [output pin]  [message code]
+  - ```sudo ./receiver [output pin]  [message code]```
      - if a massage is received with the same code then [message code] set the output pin for 500 ms to High. For Pin mapping see        https://projects.drogon.net/raspberry-pi/wiringpi/pins/
      
 ## Make receiver bash command
-  - cd /home/pi/433Mhz-Receiver-Raspberry
-  - sudo make
-  - sudo mv receiver /usr/bin/receiver
-  - sudo chown root:root /usr/bin/receiver
-  - sudo chmod u+s /usr/bin/receiver
-  - now you can use "sudo receiver" in all directorys 
+  - ```cd /home/pi/433Mhz-Receiver-Raspberry```
+  - ```sudo make```
+  - ```sudo mv receiver /usr/bin/receiver```
+  - ```sudo chown root:root /usr/bin/receiver```
+  - ```sudo chmod u+s /usr/bin/receiver```
+  - ```now you can use "sudo receiver" in all directorys``` 
 
 ## Stop
   - Stop the programm with ctrl-c 
