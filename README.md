@@ -12,6 +12,8 @@ https://github.com/ninjablocks/433Utils
 
 See https://projects.drogon.net/raspberry-pi/wiringpi/pins/ for pin mapping of the raspberry pi GPIO connector
 
+See https://github.com/schattenmann80/433Mhz-Receiver-Raspberry/wiki (German)
+
 ## Install:
 
   - Download and build wiringPI
