@@ -24,6 +24,9 @@ See https://projects.drogon.net/raspberry-pi/wiringpi/pins/ for pin mapping of t
     - git clone --recursive https://github.com/schattenmann80/433Mhz-Receiver-Raspberry.git
     - cd 433Mhz-Receiver-Raspberry
     - sudo make
+  - Hardware setup
+    - Receiver data input pin is pin 2 under WiringPi layout (GIPO 27 normal Layout)
+    - The Output pin is selectable with the command line argument
     
 ## Run
   - cd /home/pi/433Mhz-Receiver-Raspberry 
