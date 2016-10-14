@@ -47,3 +47,11 @@ See https://github.com/schattenmann80/433Mhz-Receiver-Raspberry/wiki (German)
 
 ## Stop
   - Stop the programm with ctrl-c 
+  
+## Autostart
+  - To Autostart receiver add output pin and message code to init.<br>
+    Open init with some text editor and write in the first line the pin number
+    and in the second line the message code and save it
+  - Put the following line in /etc/rc.local above the line with "exit(o)". <br>
+    `/home/pi/433Mhz-Receiver-Raspberry/receiver -s &`
+
