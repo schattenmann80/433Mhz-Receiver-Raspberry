@@ -113,7 +113,7 @@ int main(int argc, char *argv[]) {
 					if (value == 0) {
 						printf("Unknown encoding\n");
 					} else {    
-						printf("Received %i\n", mySwitch.getReceivedValue() );
+						printf("Received message code:%i\n", mySwitch.getReceivedValue() );
 						decode(mySwitch.getReceivedValue());
 					}
 					mySwitch.resetAvailable();
