@@ -122,8 +122,13 @@ int main(int argc, char *argv[]) {
 			
 		}else if(strcmp(argv[1], "-s") == 0){
 			
+			//std::ofstream myfile;
+			//myfile.open ("/tmp/receiver.log");
+			//myfile << "Service Log:\n";
+
+			
 			printf("service go \n");
-			std::ifstream infile("init");
+			std::ifstream infile("/home/pi/433Mhz-Receiver-Raspberry/init");
 			
 			int outputPin = 1;
 			int code = 0;
@@ -137,8 +142,16 @@ int main(int argc, char *argv[]) {
 			code = atoi( line.c_str() );
 			
 			printf("Pin %i\n", outputPin);
+			//myfile << "Output Pin:";
+			//myfile << outputPin;
+			//myfile << "\n";
 			
 			printf("Code %i\n", code);
+			//myfile << "Code:";
+			//myfile << code;
+			//myfile << "\n";
+			
+			//myfile.close();
 			
 			receiveMessageAndOutput(outputPin, code);
 			
