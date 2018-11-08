@@ -2,7 +2,7 @@
 
 # About
 433Mhz-Receiver-Raspberry is for receiving 433 Mhz wireless commands.
-With 433Mhz-Receiver-Raspberry you can dislay them and activate a gpio pin to show the input form a specific input sequence.
+It is possible to display the received command on a gpio pin.
 
 Example Hardware
 https://www.amazon.de/receiver-Superregeneration-Wireless-Transmitter-Burglar/dp/B00ATZV5EQ
