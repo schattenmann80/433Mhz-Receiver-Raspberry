@@ -6,8 +6,11 @@
 #include <wiringPi.h>
 #include <iostream>
 #include <string>
-#include "receiver.h"
 #include <fstream>
+
+void checkInput();
+
+void receiveMessageAndOutput(int pin, int massage);
      
 RCSwitch mySwitch;
  
