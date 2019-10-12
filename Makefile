@@ -5,7 +5,7 @@ CXXFLAGS=-DRPI
 all: receiver
 
 receiver:  rcswitch/RCSwitch.o receiver.o
-	$(CXX) $(CXXFLAGS) $(LDFLAGS) $+ -o $@ -lwiringPi	
+	$(CXX) $(CXXFLAGS) $+ -o $@ -lwiringPi	
 
 clean:
 	$(RM) rc-switch/*.o *.o receiver
