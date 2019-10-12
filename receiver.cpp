@@ -83,50 +83,52 @@ void decode(int value){
 
 int main(int argc, char *argv[]) {
   
-    // This pin is not the first pin on the RPi GPIO header!
-    // Consult https://projects.drogon.net/raspberry-pi/wiringpi/pins/
-    // for more information.
-    int PIN = 2;
-     
-    if(wiringPiSetup() == -1) {
-        printf("wiringPiSetup failed, exiting...");
-		return 0;
-    }
+	// This pin is not the first pin on the RPi GPIO header!
+	// Consult https://projects.drogon.net/raspberry-pi/wiringpi/pins/
+	// for more information.
+	int PIN = 2;
+	 
+	if(wiringPiSetup() == -1) {
+	    printf("wiringPiSetup failed, exiting...");
+	    	return 0;
+	}
 
 
 	
 	mySwitch = RCSwitch();
-    mySwitch.enableReceive(PIN);  // Receiver on interrupt 0 => that is pin #2
+	mySwitch.enableReceive(PIN);  // Receiver on interrupt 0 => that is pin #2
 	 
-	if(argv[1] != NULL){
-		if(strcmp(argv[1], "-l") == 0){
+	if( argc > 2 )
+	{
+		if(strcmp(argv[1], "-l") == 0)
+		{
 			printf("Listen mode\n");
 			
-			while(1) {
+			while(1) 
+			{
 	  
 				delay(10);
 	  
-				if (mySwitch.available()) {
+				if ( mySwitch.available() ) 
+				{
 			
 					int value = mySwitch.getReceivedValue();
 			
-					if (value == 0) {
+					if (value == 0) 
+					{
 						printf("Unknown encoding\n");
-					} else {    
-						printf("Received message code:%i\n", mySwitch.getReceivedValue() );
-						decode(mySwitch.getReceivedValue());
+					} else 
+					{    
+						printf( "Received message code:%i\n", mySwitch.getReceivedValue() );
+						decode( mySwitch.getReceivedValue() );
 					}
 					mySwitch.resetAvailable();
 				}  
 			}
 			
-		}else if(strcmp(argv[1], "-s") == 0){
-			
-			//std::ofstream myfile;
-			//myfile.open ("/tmp/receiver.log");
-			//myfile << "Service Log:\n";
-
-			
+		}
+		else if( strcmp(argv[1], "-s" ) == 0)
+		{
 			printf("service go \n");
 			std::ifstream infile("/home/pi/433Mhz-Receiver-Raspberry/init");
 			
@@ -142,20 +144,14 @@ int main(int argc, char *argv[]) {
 			code = atoi( line.c_str() );
 			
 			printf("Pin %i\n", outputPin);
-			//myfile << "Output Pin:";
-			//myfile << outputPin;
-			//myfile << "\n";
 			
 			printf("Code %i\n", code);
-			//myfile << "Code:";
-			//myfile << code;
-			//myfile << "\n";
-			
-			//myfile.close();
 			
 			receiveMessageAndOutput(outputPin, code);
 			
-		}else if(argv[2] != NULL){
+		}
+		else if( argc > 3 )
+		{
 			int outputPin = 1;
 			outputPin = atoi(argv[1]);
 			
@@ -164,9 +160,13 @@ int main(int argc, char *argv[]) {
 			receiveMessageAndOutput(outputPin, code);
 		}
 	}
+	else
+	{
+		printf( "receiver [-l|-s|<pin><code>]\n" );
+	}
 	 
 
-  exit(0);
+	exit(0);
 
 
 }
